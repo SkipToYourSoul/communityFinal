@@ -1,0 +1,96 @@
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Test</title>
+
+<script src="js/cluster.js"></script>
+
+    <!--load the google api-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+	
+	
+    <!--load the js file-->
+    <script type="text/javascript" async="" src="js/ga.js"></script>
+    <script src="js/prettify.js"></script>
+    <script src="js/sigma.min.js"></script>
+    <script src="js/sigma.forceatlas2.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src='js/jquery.json.js'></script>
+	
+	<link rel="stylesheet" href="http://sigmajs.org/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="http://sigmajs.org/css/style.css">
+    <link rel="stylesheet" href="http://sigmajs.org/css/prettify.css">
+	
+	<script>
+		function c1(){
+			var bid=document.getElementById("callBtn");
+			bid.disabled=true;
+		}
+	</script>
+
+</head>
+
+<body>
+<div>
+<input type="button" value="call" onclick="c1(),init()" id = "callBtn">
+</div>
+
+<div>
+            <div class="container">
+                <div class="span12 buttons-container">
+                    <button class="btn" id="stop-layout">Stop Layout</button>
+                    <button class="btn" id="rescale-graph">Rescale Graph</button>
+                </div>
+                <div>
+                    <div class="span12 sigma-parent" id="sigma-example-parent">
+                        <div class="sigma-expand" id="sigma-example">
+                        </div>
+                    </div>
+                    <br>
+					<br>
+					<br>
+					<br>
+                </div>
+            </div>
+
+        </div>
+		
+
+</body>
+</html>
+
+<style type="text/css">
+    .sigma-parent {
+        position: relative;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        background: black;
+        height: 700px;
+        width: 1000px;
+    }
+    .sigma-expand {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .buttons-container{
+        padding-bottom: 8px;
+        padding-top: 12px;
+    }
+</style>
+<style type="text/css" media="all">
+    body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+</style>
